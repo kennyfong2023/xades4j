@@ -148,8 +148,8 @@ class SignerBES implements XadesSigner
         Document signatureDocument = DOMHelper.getOwnerDocument(referenceNode);
 
         // Generate unique identifiers for the Signature and the SignedProperties.
-        String signatureId = String.format("xmldsig-%s", UUID.randomUUID());
-        String signedPropsId = String.format("%s-signedprops", signatureId);
+        String signatureId = "id-xades";
+        String signedPropsId = String.format("%s-signed-props", signatureId);
 
         // Signing certificate chain (may contain only the signing certificate).
         List<X509Certificate> signingCertificateChain = this.keyingProvider.getSigningCertificateChain();
